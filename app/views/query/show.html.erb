@@ -6,10 +6,12 @@ GET <br/>
 <script type="text/javascript">
 	$("#post").click(function () {
 		$.ajax({
-			url: "https://cors-options-hacking-target.herokuapp.com/query",
+			url: "http://cors-options-hacking-target.herokuapp.com/query",
 			method: "POST",
+			async: true,
+			contentType: "text/plain",
 			success: function (data) {
-				$("#posttext").html("PUT OK")
+				$("#posttext").html("POST OK")
 			}
 		});
 	});
@@ -17,6 +19,7 @@ GET <br/>
 		$.ajax({
 		url: "https://cors-options-hacking-target.herokuapp.com/query",
 		method: "PUT",
+			async: true,
 		success: function (data) {
 			$("#puttext").html("PUT OK")
 		}
