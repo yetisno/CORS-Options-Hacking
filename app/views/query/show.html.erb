@@ -1,0 +1,25 @@
+GET <br/>
+<button id="post">POST</button>
+<div id="posttext"></div>
+<button id="put">PUT</button>
+<div id="puttext"></div>
+<script type="text/javascript">
+	$("#post").click(function () {
+		$.ajax({
+			url: "https://cors-options-hacking-target.herokuapp.com/query",
+			method: "POST",
+			success: function (data) {
+				$("#posttext").html("PUT OK")
+			}
+		});
+	});
+	$("#put").click(function () {
+		$.ajax({
+		url: "https://cors-options-hacking-target.herokuapp.com/query",
+		method: "PUT",
+		success: function (data) {
+			$("#puttext").html("PUT OK")
+		}
+	});
+	});
+</script>
